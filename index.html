@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <title>Caesarchifferknäckaren</title>
+    <link rel="stylesheet" href="stil.css"> <!-- CSS -->
+    <link href="https://fonts.googleapis.com/css?family=Old+Standard+TT|Rye&display=swap" rel="stylesheet"> <!-- Typsnitt -->
+</head>
+<body>
+    <div id="val" class="ruta"> <!-- Välkomstrutan -->
+        <p class="rubrik">Caesarchiffer</p>
+        <button type="button" id="chifferUI">Chiffrera ditt meddelande!</button><br><br>
+        <button type="button" id="knackUI">Knäck ett chiffer!</button>
+    </div>
+    <div id="chiffrera" class="ruta">
+        <p class="rubrik">Chiffrera</p>
+        <textarea id="meddelande" placeholder="Meddelande..." cols=61 rows=10 class="upp"></textarea><br>
+        <button type="button" class="upp" id="tillbaka">Tillbaka</button>
+        <button type="button" class="upp" id="chiffreraKnapp">Chiffrera</button>
+        <input type="number" id="nyckel" placeholder="Nyckel..." min=-28 max=28 class="upp">
+    </div>
+    <div id="resultatRuta" class="ruta">
+        <p id="resultat"></p>
+        <button type="button" id="tillbakares" class="nere">OK</button>
+    </div>
+    <div id="knack" class="ruta">
+        <p class="rubrik">Knäck</p>
+        <textarea id="text" placeholder="Chiffrerat meddelande..." cols=61 rows=10 class="upp"></textarea><br>
+        <button type="button" class="upp" id="tillbakaK">Tillbaka</button>
+        <button type="button" class="upp" id="knackKnapp">Knäck</button>
+    </div>
+    <script src="kod.js"></script> <!-- skript -->
+</body>
+</html>
