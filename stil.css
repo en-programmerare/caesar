@@ -1,53 +1,22 @@
+/*gemensam css*/
 body {
-    background-image: url("https://upload.wikimedia.org/wikipedia/commons/4/47/Caesar.jpg"); /* bakgrundsbild  */
-    background-repeat: no-repeat;
-    background-size: 633px 805px;
-    font-family: 'Old Standard TT', serif;
-    background-position: center top;
+    font-family: 'Old Standard TT', serif; 
+}
+.rubrik {
+    font-size: 10vw;
+    font-family: 'Rye', cursive;
+}
+#chiffrera {
+        display: none;
+    }
+#resultatRuta {
+    display: none;
 }
 #knack {
     display: none;
 }
 #val {
     animation: dykupp 1s ease-out
-}
-#chiffrera {
-    display: none;
-}
-#resultatRuta {
-    display: none;
-}
-#resultat {
-    height: 80%;
-    width: 90%;
-    overflow: scroll;
-}
-
-.ruta {
-    position: relative; /*en ruta */
-    left: 30vw;
-    top: 20vh;
-    background-color: skyblue;
-    border-color: black;
-    border-style: solid;
-    width: 40vw;
-    height: 50vh;
-    text-align: center;
-    background-image: linear-gradient(to bottom right, powderblue, paleturquoise);
-    border-radius: 10px;
-}
-.rubrik {
-    font-size: 60px;
-    font-family: 'Rye', cursive;
-    transform: translateY(-5vh);
-}
-.upp {
-    transform: translateY(-12vh);
-}
-.nere {
-    position: absolute;
-    top: 80%;
-    left: 45%;
 }
 button {
     font-size: 20px;
@@ -62,40 +31,106 @@ button {
 button:hover {
     background-image: linear-gradient(to right, mediumseagreen, seagreen);
 }
-@keyframes forsvinn {
-    from {
-        transform: rotateY(0deg);
-    }
-    to {
-        transform: rotateY(90deg);
-    }
-}
-@keyframes dykupp {
-    from {
-        transform: rotateY(-90deg);
-    }
-    to {
-        transform: rotateY(0deg);
-    }
-}
 input[type=number] {
     background-image: linear-gradient(to right, yellowgreen, mediumseagreen);
     width: 5vw;
     height: 2em;
 }
-@media only screen and (max-width: 1000px) {
-    .ruta {
-        left: 15vw;
-        top: 20vh;
-        width: 60vw;
-        height: 70vh;
+/*endast mobil*/
+@media only screen and (max-width: 768px) {
+    @keyframes forsvinn {
+        from {
+            opacity: 100%;
+        }
+        to {
+            opacity: 0%;
+        }
+    }
+    @keyframes dykupp {
+        from {
+            opacity: 0%;
+        }
+        to {
+            opacity: 100%;
+        }
+    }
+    body {
+        text-align: center;
+        background-image: linear-gradient(to bottom right, lightblue, lightcyan);
+        background-size: contain;
+        height: 100vh;
+    }
+    input[type=number] {
+        width: 10vw;
     }
 }
-@media only screen and (max-width: 700px) {
+/*endast dator*/
+@media only screen and (min-width: 768px) {
+    body {
+        background-image: url("https://upload.wikimedia.org/wikipedia/commons/4/47/Caesar.jpg"); /* bakgrundsbild  */
+        background-repeat: no-repeat;
+        background-size: 633px 805px;
+        background-position: center top;
+    }
+    #resultat {
+        height: 80%;
+        width: 90%;
+        overflow: scroll;
+    }
     .ruta {
-        left: 0vw;
-        top: 0vh;
-        width: 100vw;
-        height: 100vh;
+        position: relative; /*en ruta */
+        left: 30vw;
+        top: 20vh;
+        background-color: skyblue;
+        border-color: black;
+        border-style: solid;
+        width: 40vw;
+        height: 50vh;
+        min-height: 300px;
+        text-align: center;
+        background-image: linear-gradient(to bottom right, powderblue, paleturquoise);
+        border-radius: 10px;
+        overflow: hidden;
+    }
+    .rubrik {
+        transform: translateY(-5vh);
+        font-size: 5vw;
+    }
+    .upp {
+        transform: translateY(-15vh);
+    }
+    .nere {
+        position: absolute;
+        top: 80%;
+        left: 45%;
+    }
+    button {
+        font-size: 20px;
+        height: 2em;
+        border-color: grey;
+        border-style: none;
+        border-radius: 10px;
+        background-image: linear-gradient(to right, yellowgreen, mediumseagreen);
+        font-family: 'Old Standard TT', serif;
+        z-index: 1;
+    }
+    button:hover {
+        background-image: linear-gradient(to right, mediumseagreen, seagreen);
+    }
+    @keyframes forsvinn {
+        from {
+            transform: rotateY(0deg);
+        }
+        to {
+            transform: rotateY(90deg);
+        }
+    }
+    @keyframes dykupp {
+        from {
+            transform: rotateY(-90deg);
+        }
+        to {
+            transform: rotateY(0deg);
+        }
     }
 }
