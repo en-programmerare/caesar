@@ -58,13 +58,13 @@ function chiffrera(text, nyckel) {
 
 function knack(text) {
     console.time("Knäcka chiffret");
-    let nyckel = -29;
+    let nyckel = -28;
     let test = "";
     let poang = 0;
     let bastNyckel = 0;
     let bastText = "Tyvärr kunde inte texten knäckas. Ju längre text, desto bättre blir knäckaren.<br><br>&nbsp;";
     let bastPoang = 0;
-    while(nyckel != 29) {
+    while(nyckel != 28) {
         poang = 0;
         test = chiffrera(text, nyckel);
         for(let o of ord) {
