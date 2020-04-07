@@ -37,7 +37,7 @@ input[type=number] {
     height: 2em;
 }
 /*endast mobil*/
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 800px) {
     @keyframes forsvinn {
         from {
             opacity: 100%;
@@ -65,7 +65,7 @@ input[type=number] {
     }
 }
 /*endast dator*/
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 800px) {
     body {
         background-image: url("https://upload.wikimedia.org/wikipedia/commons/4/47/Caesar.jpg"); /* bakgrundsbild  */
         background-repeat: no-repeat;
