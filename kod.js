@@ -1,5 +1,5 @@
 const alfabetet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "å", "ä", "ö"];
-const ALFABETET = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "Å", "Ä", "Ö"]
+const ALFABETET = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "Å", "Ä", "Ö"];
 let ord;
 //lyssnare
 document.getElementById("chifferUI").addEventListener("click", chifferUI);
@@ -64,19 +64,23 @@ function knack(text) {
     let bastNyckel = 0;
     let bastText = "Tyvärr kunde inte texten knäckas. Ju längre text, desto bättre blir knäckaren.<br><br>&nbsp;";
     let bastPoang = 0;
+    text = " " + text + " ";
     while(nyckel != 28) {
         poang = 0;
+        console.log("Försöker med nyckel " + nyckel);
         test = chiffrera(text, nyckel);
         for(let o of ord) {
             let reg = new RegExp(" " + o + " ", "g");
             if(test.match(reg) === null)
                 continue;
             poang += test.match(reg).length;
+            console.log("Matchning på ordet " + o + " med nyckel " + nyckel);
         }
         if(poang > bastPoang) {
             bastPoang = poang;
             bastText = test;
             bastNyckel = nyckel;
+            console.log("Nyckel " + nyckel + " gav " + poang + " poäng och är följaktligen bäst.")
         }
         nyckel++;
     }

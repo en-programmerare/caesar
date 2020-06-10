@@ -1,4 +1,3 @@
-/*gemensam css*/
 body {
     font-family: 'Old Standard TT', serif; 
 }
@@ -36,8 +35,7 @@ input[type=number] {
     width: 5vw;
     height: 2em;
 }
-/*endast mobil*/
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 768px) {
     @keyframes forsvinn {
         from {
             opacity: 100%;
@@ -64,8 +62,7 @@ input[type=number] {
         width: 10vw;
     }
 }
-/*endast dator*/
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 768px) {
     body {
         background-image: url("https://upload.wikimedia.org/wikipedia/commons/4/47/Caesar.jpg"); /* bakgrundsbild  */
         background-repeat: no-repeat;
@@ -93,15 +90,18 @@ input[type=number] {
         overflow: hidden;
     }
     .rubrik {
-        transform: translateY(-5vh);
+        transform: translateY(-10vh);
         font-size: 5vw;
     }
     .upp {
-        transform: translateY(-15vh);
+        transform: translateY(-20vh);
+    }
+    .upp_lite {
+        transform: translateY(-10vh);
     }
     .nere {
         position: absolute;
-        top: 80%;
+        top: 70%;
         left: 45%;
     }
     button {
